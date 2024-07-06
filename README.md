@@ -12,7 +12,7 @@ go get github.com/altaiconsulting/zigzagencode
 package main
 
 import (
-	"altaiconsulting/zigzagencode"
+	"github.com/altaiconsulting/zigzagencode"
 	"fmt"
 )
 
