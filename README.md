@@ -3,7 +3,7 @@ Package zigzagencode implements zigzag encoding and decoding functions that retu
 Package zigzagencode requires Go version 1.22 or above
 
 ## Getting zigzagencode
-go get github.com/altaiconsulting/zigzagencode
+```go get github.com/altaiconsulting/zigzagencode```
 
 ## Examples
 ```
