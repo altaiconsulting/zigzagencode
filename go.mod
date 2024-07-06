@@ -1,4 +1,4 @@
-module altaiconsulting/zigzagencode
+module github.com/altaiconsulting/zigzagencode
 
 go 1.22
 
