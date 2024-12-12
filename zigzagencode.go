@@ -37,9 +37,12 @@ func Encode[T constraints.Signed, R constraints.Unsigned](n T) (R, error) {
 	if rbits > tbits {
 		tbits = rbits
 	}
-	extraBits := ((bits.Len64(encoded) - tbits) >> 3) << 3
+	extraBits := bits.Len64(encoded) - tbits
 	if extraBits > 0 {
-		encoded = removeLeadingOnes(encoded, extraBits)
+		extraBits := (extraBits >> 3) << 3
+		if extraBits > 0 {
+			encoded = removeLeadingOnes(encoded, extraBits)
+		}
 	}
 	if bits.Len64(encoded) > rbits {
 		rtype := reflect.TypeOf(R(0)).Name()
