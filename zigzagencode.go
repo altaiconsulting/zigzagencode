@@ -49,7 +49,7 @@ func Encode[T constraints.Signed, R constraints.Unsigned](n T) (R, error) {
 }
 
 // Decode decodes unsigned integer n of type T to signed integer of type R
-// Decode returns an error if requested return type does nopt have sufficient bits
+// Decode returns an error if requested return type does not have sufficient bits
 // to hold binary representation of the decoded number
 func Decode[T constraints.Unsigned, R constraints.Signed](n T) (R, error) {
 	n64 := uint64(n)
